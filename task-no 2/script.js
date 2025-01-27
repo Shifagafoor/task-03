@@ -1,6 +1,9 @@
-function substituteString(input) {
-    let standard = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz ";
+// encode
+
+let standard = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz ";
     let substitution = "QWERTYUIOPASDFGHJKLZXCVBNMmnbvcxzlkjhgfdsapoiuytrewq_";
+
+function encodeString(input) {
     let result = "";
 
     for (let i = 0; i < input.length; i++) {
@@ -16,5 +19,28 @@ function substituteString(input) {
 }
 
 let input = "shifa";
-let output = substituteString(input);
+let output = encodeString(input);
 console.log(output); 
+
+
+// decode
+
+function decodeString(input) {
+    
+    let result = "";
+
+    for (let i = 0; i < input.length; i++) {
+        let char = input[i];
+        let index = substitution.indexOf(char);
+        if (index !== -1) {
+            result += standard[index];
+        } else {
+            result += char;
+        }
+    }
+    return result;
+}
+
+let encoded = "school";
+let decoded = decodeString(encoded);
+console.log(decoded); 
