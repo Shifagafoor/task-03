@@ -1,0 +1,124 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #2e2e2e;
+    color: #fff; 
+}
+
+.key_mold {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    position: relative;
+    border: 1px solid black;
+    padding: 10vw;
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.3), -8px -8px 15px rgba(255, 255, 255, 0.05);
+}
+
+.keys {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.key_button .key {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #555;
+    border-radius: 5px;
+    background-color: #3a3a3a; 
+    color: #fff;
+    width: 20vh;
+    display: flex;
+    text-align: center;
+}
+
+.texts{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem; 
+}
+
+.Plain_text,
+.encrypt_text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.plain,.encrypt {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #555;
+    border-radius: 5px;
+    background-color: #3a3a3a; 
+    color: #fff;
+}
+
+.Plain_text,
+.encrypt_text {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+.arrow {
+    width: 50px;
+    height: 2px;
+    background-color: #888; 
+    position: absolute;
+}
+
+.arrow::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: -5px;
+    border: 5px solid transparent;
+    border-left-color: #888; 
+}
+
+.arrow.plain-to-encrypt {
+    top: 160px;
+    left: 35%;
+    transform: rotate(0deg);
+}
+
+@media screen and (min-width:500px){
+    .texts{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 5rem; 
+    }
+
+    .key_mold {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5rem;
+        position: relative;
+    }
+
+    .plain,.encrypt {
+        padding: 13px;
+        font-size: 16px;
+        border: 2px solid #555;
+        border-radius: 5px;
+        background-color: #3a3a3a; 
+        color: #fff;
+        width: 25vh;
+    }
+}
+
