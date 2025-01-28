@@ -1,7 +1,7 @@
 // encode
 
-let standard = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz ";
-    let substitution = "QWERTYUIOPASDFGHJKLZXCVBNMmnbvcxzlkjhgfdsapoiuytrewq_";
+let standard = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYS";
+    let substitution = "qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM";
 
 function encodeString(input) {
     let result = "";
@@ -15,13 +15,10 @@ function encodeString(input) {
             result += char;
         }
     }
+    document.querySelector(".input_text").value =result
+
     return result;
 }
-
-let input = "shifa";
-let output = encodeString(input);
-console.log(output); 
-
 
 // decode
 
@@ -37,10 +34,22 @@ function decodeString(input) {
         } else {
             result += char;
         }
+
+        document.querySelector(".text_input").value = result;
     }
     return result;
 }
 
-let encoded = "ilkxm";
-let decoded = decodeString(encoded);
-console.log(decoded); 
+document.querySelector(".encrypt_button").addEventListener('click', () => {
+
+    let input = document.querySelector('.text_input').value;
+
+    encodeString(input)
+})
+
+document.querySelector(".decrypt_button").addEventListener("click", () => {
+    
+    let input = document.querySelector(".input_text").value;
+
+    decodeString(input);
+});
