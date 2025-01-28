@@ -20,6 +20,7 @@ function encodeString(input) {
     return result;
 }
 
+
 // decode
 
 function decodeString(input) {
