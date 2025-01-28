@@ -47,7 +47,7 @@ document.querySelector(".encrypt_button").addEventListener('click', () => {
     encodeString(input)
 })
 
-document.querySelector(".decrypt_button").addEventListener("click", () => {
+document.querySelector(".decript_button").addEventListener("click", () => {
     
     let input = document.querySelector(".input_text").value;
 
