@@ -17,7 +17,7 @@ body {
     align-items: center;
     gap: 2rem;
     position: relative;
-    border: 1px solid black;
+    border: 1px solid rgb(63, 61, 61);
     padding: 10vw;
     box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.3), -8px -8px 15px rgba(255, 255, 255, 0.05);
 }

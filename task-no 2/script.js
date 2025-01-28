@@ -41,6 +41,6 @@ function decodeString(input) {
     return result;
 }
 
-let encoded = "school";
+let encoded = "ilkxm";
 let decoded = decodeString(encoded);
 console.log(decoded); 
