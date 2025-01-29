@@ -1,7 +1,7 @@
 // encode
 
-let standard = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYS";
-    let substitution = "qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM";
+let standard = "abcdefghijklmnopqrstuvwxyz";
+let substitution = "qwertyuiopasdfghjklzxcvbnm";
 
 function encodeString(input) {
     let result = "";
